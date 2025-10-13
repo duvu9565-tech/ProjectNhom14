@@ -1,5 +1,3 @@
 # ProjectNhom14
-
-Do Dinh Vien:23S1020063
-
-1 2 3!
+Lê Thị Hiền Anh 
+23S1020003
