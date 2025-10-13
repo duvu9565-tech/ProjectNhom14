@@ -4,7 +4,7 @@ const products = [
         id: 1,
         name: "Điện thoại Galaxy S23",
         price: "21990000",
-        img: "https://cdn.tgdd.vn/Products/Images/42/274684/samsung-galaxy-s23-600x600.jpg",
+        img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSoZFf0oiGIoCsqN6QbNUjuxWKCM5wfDfxSF0E13mwhA02OiHGlYlhgL3LFKqMVEQNb9SJh1AmQnn3SFGlidoHiMrDMAlhW18s5tY0DA23N1CnbUjxNAzT0we7oLT1nRInv1AWY2Jnfbg&usqp=CAc",
         origin: "Hàn Quốc",
         sold: 1532,
         rate: 4.8
