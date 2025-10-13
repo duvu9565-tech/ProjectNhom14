@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Project Nhom 14</h1>
-  </body>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- THANH TÌM KIẾM -->
+    <header class="header">
+        <h1>🛍️ Cửa hàng trực tuyến</h1>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+            <button onclick="searchProduct()">Tìm</button>
+            <a href="giohang.html" class="cart-btn">🛒 Giỏ hàng</a>
+        </div>
+    </header>
+
+    <!-- THANH ĐIỀU HƯỚNG -->
+    <nav class="navbar">
+        <a href="index.html">🏠 Trang chủ</a>
+        <a href="giohang.html">🛒 Giỏ hàng</a>
+        <a href="GDND.html">👤 Người dùng</a>
+    </nav>
+
+    <!-- DANH SÁCH SẢN PHẨM -->
+    <section class="product-list" id="productList"></section>
+
+    <!-- HỘP CHAT -->
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header" onclick="toggleChat()">💬 Chat với Admin</div>
+        <div class="chat-body" id="chatBody">
+            <div class="chat-message admin">Xin chào! Tôi có thể giúp gì cho bạn?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Nhập tin nhắn...">
+            <button onclick="sendMessage()">Gửi</button>
+        </div>
+    </div>
+
+    <!-- GỌI FILE JS RIÊNG -->
+    <script src="chuyendoi.js"></script>
+
+</body>
 </html>
