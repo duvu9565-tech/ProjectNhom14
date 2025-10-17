@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chào Bạn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 250px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Nhập tên của bạn</h2>
+    <input type="text" id="nameInput" placeholder="VD: Minh, Nam, Lan..." />
+    <br>
+    <button onclick="sayHello()">Chào</button>
+  </div>
+
+  <script>
+    function sayHello() {
+      const name = document.getElementById("nameInput").value.trim();
+      if (name === "") {
+        alert("Vui lòng nhập tên!");
+      } else {
+        alert("Xin chào, " + name + "!");
+      }
+    }
+  </script>
+
+</body>
+</html>
