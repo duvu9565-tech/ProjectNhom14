@@ -88,3 +88,15 @@ function sendMessage() {
         chatBody.scrollTop = chatBody.scrollHeight;
     }
 }
+// Lọc theo danh mục
+function filterCategory(category) {
+    const keyword = category.toLowerCase();
+    const filtered = products.filter(p => p.name.toLowerCase().includes(keyword));
+    showProducts(filtered);
+}
+
+// Hiển thị lại tất cả
+function showAll() {
+    showProducts(products);
+}
+
