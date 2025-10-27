@@ -29,6 +29,26 @@
     <a href="index.html" class="active">🏠 Trang chủ</a>
     <a href="giohang.html">🛒 Giỏ hàng</a>
     <a href="GDND.html">👤 Người dùng</a>
+
+    <!-- PHẦN SẮP XẾP VÀ LỌC SẢN PHẨM -->
+    <div class="sort-filter-group">
+      <label for="sort-price" class="sort-label">Sắp xếp theo:</label>
+      <select id="sort-price" onchange="sortProducts()">
+        <option value="">Giá (Mặc định)</option>
+        <option value="asc">Giá (Tăng dần)</option>
+        <option value="desc">Giá (Giảm dần)</option>
+      </select>
+
+      <label for="filter-price-range" class="sort-label">Khoảng giá:</label>
+      <select id="filter-price-range" onchange="filterProducts()">
+        <option value="">Tất cả</option>
+        <option value="low">Dưới 3.000.000₫</option>
+        <option value="high">Trên 3.000.000₫</option>
+      </select>
+      
+      <button class="filter-btn" onclick="filterProducts('popular')">Được mua nhiều</button>
+      <button class="filter-btn" onclick="filterProducts('newest')">Mới nhất</button>
+    </div>
   </nav>
 
   <!-- KHUNG CHÍNH GỒM DANH MỤC TRÁI + SẢN PHẨM -->
@@ -37,13 +57,13 @@
     <aside class="sidebar">
       <h3>📂 Danh mục</h3>
       <ul class="category-list">
-        <li onmouseover="filterCategory('Điện thoại')">📱 Điện thoại</li>
-        <li onmouseover="filterCategory('Laptop')">💻 Laptop</li>
-        <li onmouseover="filterCategory('Âm thanh')">🎧 Âm thanh</li>
-        <li onmouseover="filterCategory('Đồng hồ')">⌚ Đồng hồ</li>
-        <li onmouseover="filterCategory('Phụ kiện')">🔌 Phụ kiện</li>
-        <li onmouseover="filterCategory('Gia dụng')">🏠 Gia dụng</li>
-        <li onmouseover="showAll()">🌐 Tất cả</li>
+        <li onclick="filterCategory('Điện thoại')">📱 Điện thoại</li>
+        <li onclick="filterCategory('Laptop')">💻 Laptop</li>
+        <li onclick="filterCategory('Âm thanh')">🎧 Âm thanh</li>
+        <li onclick="filterCategory('Đồng hồ')">⌚ Đồng hồ</li>
+        <li onclick="filterCategory('Phụ kiện')">🔌 Phụ kiện</li>
+        <li onclick="filterCategory('Gia dụng')">🏠 Gia dụng</li>
+        <li onclick="showAll()">🌐 Tất cả</li>
       </ul>
     </aside>
 

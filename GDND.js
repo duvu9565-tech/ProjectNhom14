@@ -1,8 +1,8 @@
-// --- KHAI BÁO KEY SỬ DỤNG CHUNG ---
+// --- KEY CHUNG ---
 const CART_STORAGE_KEY = 'cart';
 const ORDER_STORAGE_KEY = 'userOrders';
 
-// --- DỮ LIỆU & HIỂN THỊ SẢN PHẨM GỢI Ý ---
+// --- DỮ LIỆU SẢN PHẨM GỢI Ý ---
 const products = [
   { name: "Tai nghe Bluetooth", price: "350.000₫", img: "https://via.placeholder.com/150/0000FF/FFFFFF?text=Tai+nghe" },
   { name: "Chuột không dây", price: "250.000₫", img: "https://via.placeholder.com/150/FF0000/FFFFFF?text=Chuot" },
@@ -10,9 +10,20 @@ const products = [
   { name: "Sạc dự phòng", price: "400.000₫", img: "https://via.placeholder.com/150/FFFF00/000000?text=Sac+du+phong" },
 ];
 
-const suggestContainer = document.getElementById("suggest-products");
+// --- HIỂN THỊ TÊN NGƯỜI DÙNG ĐĂNG NHẬP ---
+function displayUserName() {
+  const userNameElement = document.getElementById('userNameDisplay');
+  const currentUser = JSON.parse(localStorage.getItem('currentUser')); 
+  if (userNameElement && currentUser) {
+    userNameElement.textContent = currentUser.username + ' ✅'; 
+  }
+}
 
-if (suggestContainer) {
+// --- HIỂN THỊ SẢN PHẨM GỢI Ý ---
+function renderSuggestedProducts() {
+  const suggestContainer = document.getElementById("suggest-products");
+  if (!suggestContainer) return;
+
   suggestContainer.innerHTML = '';
   products.forEach(p => {
     const div = document.createElement("div");
@@ -26,13 +37,7 @@ if (suggestContainer) {
   });
 }
 
-// --- CHỨC NĂNG ĐƠN MUA (DỮ LIỆU THẬT) ---
-const orderContentArea = document.getElementById("order-content");
-
-/**
- * Lấy danh sách đơn hàng dựa trên trạng thái.
- * @param {string} status - "Chờ xác nhận" | "Chờ lấy hàng" | "Đang giao" | "Đánh giá"
- */
+// --- LẤY ĐƠN HÀNG THEO TRẠNG THÁI ---
 function getAllTransactions(status) {
   let orders = JSON.parse(localStorage.getItem(ORDER_STORAGE_KEY)) || [];
   let cart = JSON.parse(localStorage.getItem(CART_STORAGE_KEY)) || [];
@@ -49,10 +54,11 @@ function getAllTransactions(status) {
   return orders.filter(order => order.status === status);
 }
 
-/**
- * Hiển thị danh sách đơn hàng theo trạng thái (thật từ localStorage)
- */
+// --- HIỂN THỊ ĐƠN HÀNG ---
 function hienThiDonHang(status) {
+  const orderContentArea = document.getElementById("order-content");
+  if (!orderContentArea) return;
+
   const transactions = getAllTransactions(status);
   let content = `<h4>Danh sách Đơn hàng: ${status} (${transactions.length} mục)</h4>`;
 
@@ -93,15 +99,15 @@ function hienThiDonHang(status) {
     content += `<p style="color:gray;font-style:italic;">Không có đơn hàng nào ở trạng thái ${status}.</p>`;
   }
 
-  if (orderContentArea) orderContentArea.innerHTML = content;
+  orderContentArea.innerHTML = content;
 }
 
-// --- CHỨC NĂNG HỖ TRỢ ---
-const supportContentArea = document.getElementById("support-content");
-
+// --- HIỂN THỊ HỖ TRỢ ---
 function hienThiHoTro(type) {
-  let content = '';
+  const supportContentArea = document.getElementById("support-content");
+  if (!supportContentArea) return;
 
+  let content = '';
   if (type === 'Trung tâm trợ giúp') {
     content = `
       <h4>📚 Trung tâm trợ giúp</h4>
@@ -128,5 +134,13 @@ function hienThiHoTro(type) {
     `;
   }
 
-  if (supportContentArea) supportContentArea.innerHTML = content;
+  supportContentArea.innerHTML = content;
 }
+
+// --- CHẠY KHI DOM LOAD XONG ---
+document.addEventListener('DOMContentLoaded', () => {
+  displayUserName();
+  renderSuggestedProducts();
+  hienThiDonHang('Chờ xác nhận'); // trạng thái mặc định
+  hienThiHoTro('Trung tâm trợ giúp'); // hỗ trợ mặc định
+});

@@ -6,7 +6,7 @@
   <title>Giao diện người dùng</title>
   <link rel="stylesheet" href="style.css">
   <script src="auth.js"></script>
-  <script src="GDND.js"></script>
+  <script src="GDND.js" defer></script>
 </head>
 
 <body onload="checkAuth()">
@@ -30,7 +30,7 @@
     <div class="user-profile">
       <img src="https://via.placeholder.com/100" alt="Avatar người dùng" class="avatar-large">
       <div class="user-details">
-        <h2>Nguyễn Văn A ✅</h2>
+        <h2 id="userNameDisplay">Nguyễn Văn A ✅</h2>
         <p>Người theo dõi: <b>120</b></p>
         <p>Đang theo dõi: <b>80</b></p>
       </div>

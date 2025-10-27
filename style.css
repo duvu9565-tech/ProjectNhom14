@@ -49,6 +49,43 @@ body {
     background: #ff5722;
     color: white;
 }
+/* NHÓM SẮP XẾP & LỌC SẢN PHẨM TRONG NAVBAR */
+.sort-filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-label {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+}
+
+.sort-filter-group select,
+.sort-filter-group .filter-btn {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sort-filter-group select {
+    background: #f9f9f9;
+}
+
+.filter-btn {
+    background: #ff7043;
+    color: white;
+    border: none;
+    font-weight: 500;
+}
+
+.filter-btn:hover {
+    background: #e04e1c;
+}
 
 /* --------------------------- */
 /* KHUNG NỘI DUNG CHÍNH NGƯỜI DÙNG */

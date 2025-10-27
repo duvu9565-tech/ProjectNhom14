@@ -1,7 +1,4 @@
-
 // Biến toàn cục để lưu trữ danh sách sản phẩm mẫu.
-// Dòng này phải được thực thi SAU KHI thẻ <section> đã được tải
-
 const products = [
     // =======================================================
     // ====== ĐIỆN THOẠI (1/20) ===============================
@@ -641,8 +638,8 @@ const products = [
     {
         id: 58,
         name: "Micro thu âm Rode NT1",
-        price: "5500000",
-        img: "https://cdn.tgdd.vn/Products/Images/2162/261057/jbl-charge-5-thumb-600x600.jpg",
+        price: "6990000",
+        img: "https://cdn.tgdd.vn/Products/Images/54/284734/sony-wh-1000xm5-thumb-600x600.jpg",
         category: "Âm thanh",
         origin: "Úc",
         sold: 120,
@@ -651,720 +648,205 @@ const products = [
     // ====== ÂM THANH (19/20)
     {
         id: 59,
-        name: "Loa Apple HomePod mini",
-        price: "2500000",
+        name: "Mixer Yamaha MG10XU",
+        price: "8990000",
         img: "https://cdn.tgdd.vn/Products/Images/2162/261057/jbl-charge-5-thumb-600x600.jpg",
         category: "Âm thanh",
-        origin: "Mỹ",
-        sold: 980,
-        rate: 4.6
+        origin: "Nhật Bản",
+        sold: 80,
+        rate: 4.7
     },
     // ====== ÂM THANH (20/20)
     {
         id: 60,
-        name: "Tai nghe Xiaomi Buds 3",
-        price: "2190000",
+        name: "Tai nghe Jabra Elite 7 Pro",
+        price: "5490000",
         img: "https://cdn.tgdd.vn/Products/Images/54/284734/sony-wh-1000xm5-thumb-600x600.jpg",
         category: "Âm thanh",
-        origin: "Trung Quốc",
-        sold: 800,
-        rate: 4.3
-    },
-
-    // =======================================================
-    // ====== ĐỒNG HỒ (1/20) ==================================
-    {
-        id: 61,
-        name: "Đồng hồ Apple Watch Series 9",
-        price: "11990000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/311036/apple-watch-s9-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Mỹ",
-        sold: 475,
-        rate: 4.8
-    },
-    // ====== ĐỒNG HỒ (2/20)
-    {
-        id: 62,
-        name: "Đồng hồ Samsung Galaxy Watch 6",
-        price: "7990000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/313039/samsung-galaxy-watch-6-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Hàn Quốc",
-        sold: 320,
-        rate: 4.6
-    },
-    // ====== ĐỒNG HỒ (3/20)
-    {
-        id: 63,
-        name: "Đồng hồ Garmin Forerunner 965",
-        price: "16990000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/311036/apple-watch-s9-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Mỹ",
-        sold: 150,
-        rate: 4.9
-    },
-    // ====== ĐỒNG HỒ (4/20)
-    {
-        id: 64,
-        name: "Đồng hồ Huawei Watch GT 3 Pro",
-        price: "6990000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/313039/samsung-galaxy-watch-6-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Trung Quốc",
-        sold: 510,
-        rate: 4.5
-    },
-    // ====== ĐỒNG HỒ (5/20)
-    {
-        id: 65,
-        name: "Đồng hồ Casio G-Shock GA-B2100",
-        price: "3990000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/311036/apple-watch-s9-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Nhật Bản",
-        sold: 800,
-        rate: 4.7
-    },
-    // ====== ĐỒNG HỒ (6/20)
-    {
-        id: 66,
-        name: "Đồng hồ Xiaomi Watch S1 Pro",
-        price: "4990000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/313039/samsung-galaxy-watch-6-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Trung Quốc",
-        sold: 400,
-        rate: 4.4
-    },
-    // ====== ĐỒNG HỒ (7/20)
-    {
-        id: 67,
-        name: "Đồng hồ Fossil Gen 6",
-        price: "5990000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/311036/apple-watch-s9-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Mỹ",
-        sold: 280,
-        rate: 4.6
-    },
-    // ====== ĐỒNG HỒ (8/20)
-    {
-        id: 68,
-        name: "Đồng hồ Citizen Eco-Drive",
-        price: "8500000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/313039/samsung-galaxy-watch-6-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Nhật Bản",
-        sold: 190,
-        rate: 4.8
-    },
-    // ====== ĐỒNG HỒ (9/20)
-    {
-        id: 69,
-        name: "Đồng hồ Suunto 9 Peak Pro",
-        price: "12990000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/311036/apple-watch-s9-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Phần Lan",
-        sold: 100,
-        rate: 4.9
-    },
-    // ====== ĐỒNG HỒ (10/20)
-    {
-        id: 70,
-        name: "Đồng hồ Tissot Le Locle",
-        price: "18000000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/313039/samsung-galaxy-watch-6-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Thụy Sĩ",
-        sold: 50,
-        rate: 5.0
-    },
-    // ====== ĐỒNG HỒ (11/20)
-    {
-        id: 71,
-        name: "Đồng hồ Apple Watch SE 2022",
-        price: "7490000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/311036/apple-watch-s9-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Mỹ",
-        sold: 920,
-        rate: 4.7
-    },
-    // ====== ĐỒNG HỒ (12/20)
-    {
-        id: 72,
-        name: "Đồng hồ Polar Pacer Pro",
-        price: "8990000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/313039/samsung-galaxy-watch-6-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Phần Lan",
-        sold: 140,
-        rate: 4.5
-    },
-    // ====== ĐỒNG HỒ (13/20)
-    {
-        id: 73,
-        name: "Đồng hồ Tag Heuer Aquaracer",
-        price: "50000000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/311036/apple-watch-s9-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Thụy Sĩ",
-        sold: 20,
-        rate: 4.9
-    },
-    // ====== ĐỒNG HỒ (14/20)
-    {
-        id: 74,
-        name: "Đồng hồ Orient Bambino",
-        price: "4500000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/313039/samsung-galaxy-watch-6-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Nhật Bản",
-        sold: 650,
-        rate: 4.6
-    },
-    // ====== ĐỒNG HỒ (15/20)
-    {
-        id: 75,
-        name: "Đồng hồ Fitbit Charge 6",
-        price: "3990000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/311036/apple-watch-s9-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Mỹ",
-        sold: 720,
-        rate: 4.4
-    },
-    // ====== ĐỒNG HỒ (16/20)
-    {
-        id: 76,
-        name: "Đồng hồ Amazfit GTS 4 Mini",
-        price: "2490000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/313039/samsung-galaxy-watch-6-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Trung Quốc",
-        sold: 1050,
-        rate: 4.3
-    },
-    // ====== ĐỒNG HỒ (17/20)
-    {
-        id: 77,
-        name: "Đồng hồ Seiko Presage",
-        price: "9500000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/311036/apple-watch-s9-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Nhật Bản",
-        sold: 210,
-        rate: 4.8
-    },
-    // ====== ĐỒNG HỒ (18/20)
-    {
-        id: 78,
-        name: "Đồng hồ Montblanc Summit 3",
-        price: "35000000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/313039/samsung-galaxy-watch-6-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Đức",
-        sold: 30,
-        rate: 4.9
-    },
-    // ====== ĐỒNG HỒ (19/20)
-    {
-        id: 79,
-        name: "Đồng hồ Longines HydroConquest",
-        price: "25000000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/311036/apple-watch-s9-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Thụy Sĩ",
-        sold: 70,
-        rate: 5.0
-    },
-    // ====== ĐỒNG HỒ (20/20)
-    {
-        id: 80,
-        name: "Đồng hồ Timex Expedition",
-        price: "1990000",
-        img: "https://cdn.tgdd.vn/Products/Images/7077/313039/samsung-galaxy-watch-6-thumb-600x600.jpg",
-        category: "Đồng hồ",
-        origin: "Mỹ",
-        sold: 990,
-        rate: 4.3
-    },
-
-    // =======================================================
-    // ====== PHỤ KIỆN (1/20) =================================
-    {
-        id: 81,
-        name: "Sạc nhanh 25W Samsung chính hãng",
-        price: "590000",
-        img: "https://cdn.tgdd.vn/Products/Images/9499/237346/sac-25w-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Việt Nam",
-        sold: 2100,
-        rate: 4.8
-    },
-    // ====== PHỤ KIỆN (2/20)
-    {
-        id: 82,
-        name: "Chuột không dây Logitech M331",
-        price: "450000",
-        img: "https://cdn.tgdd.vn/Products/Images/86/223142/logitech-m331-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Trung Quốc",
-        sold: 870,
-        rate: 4.6
-    },
-    // ====== PHỤ KIỆN (3/20)
-    {
-        id: 83,
-        name: "Bàn phím cơ AKKO 3087",
-        price: "1990000",
-        img: "https://cdn.tgdd.vn/Products/Images/9499/237346/sac-25w-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Trung Quốc",
-        sold: 450,
-        rate: 4.7
-    },
-    // ====== PHỤ KIỆN (4/20)
-    {
-        id: 84,
-        name: "Ổ cứng SSD Samsung 1TB",
-        price: "2490000",
-        img: "https://cdn.tgdd.vn/Products/Images/86/223142/logitech-m331-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Hàn Quốc",
-        sold: 600,
-        rate: 4.8
-    },
-    // ====== PHỤ KIỆN (5/20)
-    {
-        id: 85,
-        name: "Webcam Logitech C922",
-        price: "1890000",
-        img: "https://cdn.tgdd.vn/Products/Images/9499/237346/sac-25w-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Thụy Sĩ",
-        sold: 350,
-        rate: 4.6
-    },
-    // ====== PHỤ KIỆN (6/20)
-    {
-        id: 86,
-        name: "Hub chuyển đổi USB-C HyperDrive",
-        price: "1590000",
-        img: "https://cdn.tgdd.vn/Products/Images/86/223142/logitech-m331-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Mỹ",
-        sold: 520,
-        rate: 4.5
-    },
-    // ====== PHỤ KIỆN (7/20)
-    {
-        id: 87,
-        name: "Giá đỡ Laptop nhôm",
-        price: "250000",
-        img: "https://cdn.tgdd.vn/Products/Images/9499/237346/sac-25w-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Việt Nam",
-        sold: 1500,
-        rate: 4.4
-    },
-    // ====== PHỤ KIỆN (8/20)
-    {
-        id: 88,
-        name: "Cáp sạc nhanh Innostyle C-L",
-        price: "490000",
-        img: "https://cdn.tgdd.vn/Products/Images/86/223142/logitech-m331-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Hồng Kông",
-        sold: 1200,
-        rate: 4.8
-    },
-    // ====== PHỤ KIỆN (9/20)
-    {
-        id: 89,
-        name: "Bao da iPad Pro 11 inch",
-        price: "790000",
-        img: "https://cdn.tgdd.vn/Products/Images/9499/237346/sac-25w-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Trung Quốc",
-        sold: 670,
-        rate: 4.5
-    },
-    // ====== PHỤ KIỆN (10/20)
-    {
-        id: 90,
-        name: "Pin sạc dự phòng Xiaomi 10000mAh",
-        price: "550000",
-        img: "https://cdn.tgdd.vn/Products/Images/86/223142/logitech-m331-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Trung Quốc",
-        sold: 2500,
-        rate: 4.6
-    },
-    // ====== PHỤ KIỆN (11/20)
-    {
-        id: 91,
-        name: "Chuột Gaming SteelSeries Rival 3",
-        price: "1190000",
-        img: "https://cdn.tgdd.vn/Products/Images/9499/237346/sac-25w-thumb-600x600.jpg",
-        category: "Phụ kiện",
         origin: "Đan Mạch",
-        sold: 400,
-        rate: 4.7
-    },
-    // ====== PHỤ KIỆN (12/20)
-    {
-        id: 92,
-        name: "Bàn di chuột Razer Goliathus",
-        price: "350000",
-        img: "https://cdn.tgdd.vn/Products/Images/86/223142/logitech-m331-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Mỹ",
-        sold: 900,
-        rate: 4.4
-    },
-    // ====== PHỤ KIỆN (13/20)
-    {
-        id: 93,
-        name: "Cáp HDMI 2.1 Ugreen",
-        price: "490000",
-        img: "https://cdn.tgdd.vn/Products/Images/9499/237346/sac-25w-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Trung Quốc",
-        sold: 700,
-        rate: 4.5
-    },
-    // ====== PHỤ KIỆN (14/20)
-    {
-        id: 94,
-        name: "Bộ vệ sinh màn hình Laptop",
-        price: "150000",
-        img: "https://cdn.tgdd.vn/Products/Images/86/223142/logitech-m331-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Việt Nam",
-        sold: 1800,
-        rate: 4.2
-    },
-    // ====== PHỤ KIỆN (15/20)
-    {
-        id: 95,
-        name: "Thiết bị định vị Apple AirTag",
-        price: "790000",
-        img: "https://cdn.tgdd.vn/Products/Images/9499/237346/sac-25w-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Mỹ",
-        sold: 550,
-        rate: 4.7
-    },
-    // ====== PHỤ KIỆN (16/20)
-    {
-        id: 96,
-        name: "Bộ chuyển đổi USB 3.0",
-        price: "290000",
-        img: "https://cdn.tgdd.vn/Products/Images/86/223142/logitech-m331-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Trung Quốc",
-        sold: 950,
-        rate: 4.3
-    },
-    // ====== PHỤ KIỆN (17/20)
-    {
-        id: 97,
-        name: "Kính cường lực iPhone 15",
-        price: "250000",
-        img: "https://cdn.tgdd.vn/Products/Images/9499/237346/sac-25w-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Việt Nam",
-        sold: 3000,
-        rate: 4.9
-    },
-    // ====== PHỤ KIỆN (18/20)
-    {
-        id: 98,
-        name: "Tai nghe có dây Samsung",
-        price: "190000",
-        img: "https://cdn.tgdd.vn/Products/Images/86/223142/logitech-m331-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Hàn Quốc",
-        sold: 1100,
-        rate: 4.4
-    },
-    // ====== PHỤ KIỆN (19/20)
-    {
-        id: 99,
-        name: "Đèn LED RGB cho màn hình",
-        price: "690000",
-        img: "https://cdn.tgdd.vn/Products/Images/9499/237346/sac-25w-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Trung Quốc",
-        sold: 400,
-        rate: 4.6
-    },
-    // ====== PHỤ KIỆN (20/20)
-    {
-        id: 100,
-        name: "Thẻ nhớ MicroSD Sandisk 128GB",
-        price: "390000",
-        img: "https://cdn.tgdd.vn/Products/Images/86/223142/logitech-m331-thumb-600x600.jpg",
-        category: "Phụ kiện",
-        origin: "Mỹ",
-        sold: 1500,
-        rate: 4.8
-    },
-    
-    // =======================================================
-    // ====== GIA DỤNG (1/20) =================================
-    {
-        id: 101,
-        name: "Nồi chiên không dầu Philips HD9252",
-        price: "2590000",
-        img: "https://cdn.tgdd.vn/Products/Images/1982/248654/philips-hd9252-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Hà Lan",
-        sold: 560,
-        rate: 4.8
-    },
-    // ====== GIA DỤNG (2/20)
-    {
-        id: 102,
-        name: "Máy hút bụi Xiaomi Mi Vacuum G10",
-        price: "4490000",
-        img: "https://cdn.tgdd.vn/Products/Images/2221/235433/xiaomi-mi-vacuum-g10-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Trung Quốc",
-        sold: 375,
-        rate: 4.7
-    },
-    // ====== GIA DỤNG (3/20)
-    {
-        id: 103,
-        name: "Robot hút bụi Ecovacs Deebot T20",
-        price: "15900000",
-        img: "https://cdn.tgdd.vn/Products/Images/1982/248654/philips-hd9252-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Trung Quốc",
-        sold: 150,
-        rate: 4.9
-    },
-    // ====== GIA DỤNG (4/20)
-    {
-        id: 104,
-        name: "Máy lọc không khí Sharp FP-J80EV-H",
-        price: "6990000",
-        img: "https://cdn.tgdd.vn/Products/Images/2221/235433/xiaomi-mi-vacuum-g10-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Nhật Bản",
-        sold: 480,
-        rate: 4.6
-    },
-    // ====== GIA DỤNG (5/20)
-    {
-        id: 105,
-        name: "Nồi cơm điện tử Cuckoo 1.8L",
-        price: "2990000",
-        img: "https://cdn.tgdd.vn/Products/Images/1982/248654/philips-hd9252-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Hàn Quốc",
-        sold: 900,
-        rate: 4.5
-    },
-    // ====== GIA DỤNG (6/20)
-    {
-        id: 106,
-        name: "Máy rửa chén Bosch SMS46",
-        price: "18990000",
-        img: "https://cdn.tgdd.vn/Products/Images/2221/235433/xiaomi-mi-vacuum-g10-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Đức",
-        sold: 80,
-        rate: 4.8
-    },
-    // ====== GIA DỤNG (7/20)
-    {
-        id: 107,
-        name: "Bếp từ đôi Kangaroo",
-        price: "3490000",
-        img: "https://cdn.tgdd.vn/Products/Images/1982/248654/philips-hd9252-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Việt Nam",
-        sold: 720,
-        rate: 4.4
-    },
-    // ====== GIA DỤNG (8/20)
-    {
-        id: 108,
-        name: "Máy ép chậm Hurom H200",
-        price: "9500000",
-        img: "https://cdn.tgdd.vn/Products/Images/2221/235433/xiaomi-mi-vacuum-g10-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Hàn Quốc",
-        sold: 250,
-        rate: 4.9
-    },
-    // ====== GIA DỤNG (9/20)
-    {
-        id: 109,
-        name: "Máy pha cà phê Delonghi",
-        price: "7990000",
-        img: "https://cdn.tgdd.vn/Products/Images/1982/248654/philips-hd9252-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Ý",
-        sold: 180,
-        rate: 4.7
-    },
-    // ====== GIA DỤNG (10/20)
-    {
-        id: 110,
-        name: "Máy sấy tóc Dyson Supersonic",
-        price: "11990000",
-        img: "https://cdn.tgdd.vn/Products/Images/2221/235433/xiaomi-mi-vacuum-g10-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Anh",
-        sold: 100,
-        rate: 5.0
-    },
-    // ====== GIA DỤNG (11/20)
-    {
-        id: 111,
-        name: "Lò vi sóng Sharp R-G222VN-S",
-        price: "1590000",
-        img: "https://cdn.tgdd.vn/Products/Images/1982/248654/philips-hd9252-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Thái Lan",
-        sold: 880,
-        rate: 4.3
-    },
-    // ====== GIA DỤNG (12/20)
-    {
-        id: 112,
-        name: "Bình đun siêu tốc Philips HD9350",
-        price: "1290000",
-        img: "https://cdn.tgdd.vn/Products/Images/2221/235433/xiaomi-mi-vacuum-g10-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Hà Lan",
-        sold: 1100,
-        rate: 4.4
-    },
-    // ====== GIA DỤNG (13/20)
-    {
-        id: 113,
-        name: "Máy xay sinh tố Sunhouse",
-        price: "990000",
-        img: "https://cdn.tgdd.vn/Products/Images/1982/248654/philips-hd9252-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Việt Nam",
-        sold: 1300,
-        rate: 4.2
-    },
-    // ====== GIA DỤNG (14/20)
-    {
-        id: 114,
-        name: "Quạt không cánh Dyson AM07",
-        price: "9990000",
-        img: "https://cdn.tgdd.vn/Products/Images/2221/235433/xiaomi-mi-vacuum-g10-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Anh",
-        sold: 120,
-        rate: 4.8
-    },
-    // ====== GIA DỤNG (15/20)
-    {
-        id: 115,
-        name: "Bàn ủi hơi nước Tefal FV9845",
-        price: "3590000",
-        img: "https://cdn.tgdd.vn/Products/Images/1982/248654/philips-hd9252-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Pháp",
         sold: 350,
         rate: 4.6
     },
-    // ====== GIA DỤNG (16/20)
-    {
-        id: 116,
-        name: "Máy hút ẩm Sharp DW-D12A",
-        price: "5500000",
-        img: "https://cdn.tgdd.vn/Products/Images/2221/235433/xiaomi-mi-vacuum-g10-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Nhật Bản",
-        sold: 210,
-        rate: 4.7
-    },
-    // ====== GIA DỤNG (17/20)
-    {
-        id: 117,
-        name: "Máy làm bánh mì Lock&Lock",
-        price: "2990000",
-        img: "https://cdn.tgdd.vn/Products/Images/1982/248654/philips-hd9252-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Hàn Quốc",
-        sold: 400,
-        rate: 4.5
-    },
-    // ====== GIA DỤNG (18/20)
-    {
-        id: 118,
-        name: "Nồi áp suất điện Sunhouse",
-        price: "1790000",
-        img: "https://cdn.tgdd.vn/Products/Images/2221/235433/xiaomi-mi-vacuum-g10-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Việt Nam",
-        sold: 650,
-        rate: 4.3
-    },
-    // ====== GIA DỤNG (19/20)
-    {
-        id: 119,
-        name: "Bếp nướng điện không khói Philips",
-        price: "2290000",
-        img: "https://cdn.tgdd.vn/Products/Images/1982/248654/philips-hd9252-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Hà Lan",
-        sold: 500,
-        rate: 4.6
-    },
-    // ====== GIA DỤNG (20/20)
-    {
-        id: 120,
-        name: "Cân điện tử Xiaomi Smart Scale 2",
-        price: "590000",
-        img: "https://cdn.tgdd.vn/Products/Images/2221/235433/xiaomi-mi-vacuum-g10-thumb-600x600.jpg",
-        category: "Gia dụng",
-        origin: "Trung Quốc",
-        sold: 950,
-        rate: 4.5
-    }
+// =======================================================
+    // ====== ĐỒNG HỒ (10 SẢN PHẨM) ==========================
+    { id: 31, name: "Apple Watch Series 9 GPS 41mm", price: "10990000", img: "https://cdn.tgdd.vn/Products/Images/707/306325/apple-watch-s9-41mm-den-thumb-600x600.jpg", category: "Đồng hồ", origin: "Mỹ", sold: 900, rate: 4.8 },
+    { id: 32, name: "Samsung Galaxy Watch 6 Classic 47mm", price: "8990000", img: "https://cdn.tgdd.vn/Products/Images/707/306325/samsung-galaxy-watch6-classic-47mm-thumb-600x600.jpg", category: "Đồng hồ", origin: "Hàn Quốc", sold: 650, rate: 4.7 },
+    { id: 33, name: "Đồng hồ thông minh Garmin Forerunner 265", price: "12500000", img: "https://cdn.tgdd.vn/Products/Images/707/304200/garmin-forerunner-265-thumb-600x600.jpg", category: "Đồng hồ", origin: "Mỹ", sold: 450, rate: 4.9 },
+    { id: 34, name: "Đồng hồ thông minh Xiaomi Watch S1 Pro", price: "4990000", img: "https://cdn.tgdd.vn/Products/Images/707/304200/xiaomi-watch-s1-pro-thumb-600x600.jpg", category: "Đồng hồ", origin: "Trung Quốc", sold: 700, rate: 4.6 },
+    { id: 35, name: "Đồng hồ thông minh Huawei Watch GT 4", price: "5990000", img: "https://cdn.tgdd.vn/Products/Images/707/304200/huawei-watch-gt-4-thumb-600x600.jpg", category: "Đồng hồ", origin: "Trung Quốc", sold: 550, rate: 4.5 },
+    { id: 36, name: "Vòng đeo tay thông minh Xiaomi Band 8", price: "990000", img: "https://cdn.tgdd.vn/Products/Images/707/304200/xiaomi-band-8-thumb-600x600.jpg", category: "Đồng hồ", origin: "Trung Quốc", sold: 1800, rate: 4.4 },
+    { id: 37, name: "Apple Watch SE 2023", price: "6990000", img: "https://cdn.tgdd.vn/Products/Images/707/306325/apple-watch-se-2023-thumb-600x600.jpg", category: "Đồng hồ", origin: "Mỹ", sold: 850, rate: 4.7 },
+    { id: 38, name: "Đồng hồ thông minh Amazfit Bip 3 Pro", price: "1590000", img: "https://cdn.tgdd.vn/Products/Images/707/287372/amazfit-bip-3-pro-thumb-600x600.jpg", category: "Đồng hồ", origin: "Trung Quốc", sold: 1100, rate: 4.3 },
+    { id: 39, name: "Đồng hồ thông minh Suunto 9 Peak Pro", price: "18000000", img: "https://cdn.tgdd.vn/Products/Images/707/304200/suunto-9-peak-pro-thumb-600x600.jpg", category: "Đồng hồ", origin: "Phần Lan", sold: 200, rate: 4.9 },
+    { id: 40, name: "Đồng hồ Casio G-Shock GA-2100", price: "3500000", img: "https://cdn.tgdd.vn/Products/Images/6970/202022/casio-g-shock-ga-2100-thumb-600x600.jpg", category: "Đồng hồ", origin: "Nhật Bản", sold: 500, rate: 4.6 },
+
+    // =======================================================
+    // ====== PHỤ KIỆN (10 SẢN PHẨM) =========================
+    { id: 41, name: "Sạc dự phòng Anker PowerCore III 20000mAh", price: "1290000", img: "https://cdn.tgdd.vn/Products/Images/58/281313/sac-du-phong-anker-powercore-iii-elite-20000mah-thumb-600x600.jpg", category: "Phụ kiện", origin: "Mỹ", sold: 2100, rate: 4.5 },
+    { id: 42, name: "Cáp sạc nhanh Innostyle C to Lightning", price: "390000", img: "https://cdn.tgdd.vn/Products/Images/58/267990/cap-sac-nhanh-innostyle-thumb-600x600.jpg", category: "Phụ kiện", origin: "Mỹ", sold: 3500, rate: 4.7 },
+    { id: 43, name: "Bàn phím cơ Logitech G Pro X TKL", price: "4500000", img: "https://cdn.tgdd.vn/Products/Images/86/300438/ban-phim-co-logitech-g-pro-tkl-thumb-600x600.jpg", category: "Phụ kiện", origin: "Thụy Sĩ", sold: 500, rate: 4.8 },
+    { id: 44, name: "Chuột không dây Logitech MX Master 3S", price: "2490000", img: "https://cdn.tgdd.vn/Products/Images/86/275336/chuot-khong-day-logitech-mx-master-3s-thumb-600x600.jpg", category: "Phụ kiện", origin: "Thụy Sĩ", sold: 650, rate: 4.9 },
+    { id: 45, name: "Hub chuyển đổi HyperDrive USB-C", price: "1890000", img: "https://cdn.tgdd.vn/Products/Images/58/275336/hub-chuyen-doi-hyperdrive-thumb-600x600.jpg", category: "Phụ kiện", origin: "Mỹ", sold: 400, rate: 4.6 },
+    { id: 46, name: "Ốp lưng iPhone 15 Pro Max Silicon", price: "450000", img: "https://cdn.tgdd.vn/Products/Images/60/281570/op-lung-iphone-15-pro-max-silicon-thumb-600x600.jpg", category: "Phụ kiện", origin: "Trung Quốc", sold: 4200, rate: 4.4 },
+    { id: 47, name: "Màn hình di động ASUS ZenScreen 15.6 inch", price: "6990000", img: "https://cdn.tgdd.vn/Products/Images/55/281570/man-hinh-di-dong-asus-thumb-600x600.jpg", category: "Phụ kiện", origin: "Đài Loan", sold: 150, rate: 4.7 },
+    { id: 48, name: "Thẻ nhớ MicroSD Sandisk Ultra 128GB", price: "390000", img: "https://cdn.tgdd.vn/Products/Images/707/287372/the-nho-microsd-sandisk-thumb-600x600.jpg", category: "Phụ kiện", origin: "Mỹ", sold: 5000, rate: 4.5 },
+    { id: 49, name: "Đế sạc không dây Belkin Boost Charge 3-in-1", price: "2990000", img: "https://cdn.tgdd.vn/Products/Images/58/281570/de-sac-khong-day-belkin-thumb-600x600.jpg", category: "Phụ kiện", origin: "Mỹ", sold: 300, rate: 4.8 },
+    { id: 50, name: "Webcam Logitech C922 Pro Stream", price: "1990000", img: "https://cdn.tgdd.vn/Products/Images/86/281570/webcam-logitech-c922-thumb-600x600.jpg", category: "Phụ kiện", origin: "Thụy Sĩ", sold: 450, rate: 4.6 },
+
+    // =======================================================
+    // ====== GIA DỤNG (10 SẢN PHẨM) =========================
+    { id: 51, name: "Máy lọc không khí Xiaomi Air Purifier 4 Pro", price: "4990000", img: "https://cdn.tgdd.vn/Products/Images/1942/272378/may-loc-khong-khi-xiaomi-air-purifier-4-pro-thumb-600x600.jpg", category: "Gia dụng", origin: "Trung Quốc", sold: 750, rate: 4.4 },
+    { id: 52, name: "Nồi chiên không dầu Philips HD9270/90", price: "3990000", img: "https://cdn.tgdd.vn/Products/Images/1942/272378/noi-chien-khong-dau-philips-thumb-600x600.jpg", category: "Gia dụng", origin: "Hà Lan", sold: 800, rate: 4.6 },
+    { id: 53, name: "Robot hút bụi Ecovacs Deebot T10", price: "11990000", img: "https://cdn.tgdd.vn/Products/Images/1942/301799/robot-hut-bui-ecovacs-t10-thumb-600x600.jpg", category: "Gia dụng", origin: "Trung Quốc", sold: 550, rate: 4.8 },
+    { id: 54, name: "Máy hút bụi cầm tay Dyson V12 Detect Slim", price: "17990000", img: "https://cdn.tgdd.vn/Products/Images/1942/301799/may-hut-bui-dyson-v12-thumb-600x600.jpg", category: "Gia dụng", origin: "Anh", sold: 300, rate: 4.9 },
+    { id: 55, name: "Bếp từ đôi Sunhouse SHD6800", price: "2490000", img: "https://cdn.tgdd.vn/Products/Images/1942/301799/bep-tu-doi-sunhouse-thumb-600x600.jpg", category: "Gia dụng", origin: "Việt Nam", sold: 1200, rate: 4.3 },
+    { id: 56, name: "Máy pha cà phê Delonghi Dedica EC685", price: "5990000", img: "https://cdn.tgdd.vn/Products/Images/1942/301799/may-pha-ca-phe-delonghi-thumb-600x600.jpg", category: "Gia dụng", origin: "Ý", sold: 400, rate: 4.7 },
+    { id: 57, name: "Máy ép chậm Hurom H-200", price: "7500000", img: "https://cdn.tgdd.vn/Products/Images/1942/301799/may-ep-cham-hurom-thumb-600x600.jpg", category: "Gia dụng", origin: "Hàn Quốc", sold: 600, rate: 4.5 },
+    { id: 58, name: "Quạt không cánh Xiaomi Mijia A1", price: "3490000", img: "https://cdn.tgdd.vn/Products/Images/1942/301799/quat-khong-canh-xiaomi-thumb-600x600.jpg", category: "Gia dụng", origin: "Trung Quốc", sold: 950, rate: 4.4 },
+    { id: 59, name: "Bàn ủi hơi nước Philips GC558", price: "2990000", img: "https://cdn.tgdd.vn/Products/Images/1942/301799/ban-ui-hoi-nuoc-philips-thumb-600x600.jpg", category: "Gia dụng", origin: "Hà Lan", sold: 1000, rate: 4.2 },
+    { id: 60, name: "Cân điện tử thông minh Xiaomi Scale 2", price: "690000", img: "https://cdn.tgdd.vn/Products/Images/1942/301799/can-dien-tu-xiaomi-thumb-600x600.jpg", category: "Gia dụng", origin: "Trung Quốc", sold: 1500, rate: 4.6 },
 ];
 
-// ========== HIỂN THỊ SẢN PHẨM ==========
-function showProducts(list) {
-    const productList = document.getElementById("productList");
-    if (!productList) return; // tránh lỗi nếu phần tử chưa sẵn sàng
+// Biến lưu trữ trạng thái sản phẩm hiện tại (đã lọc/sắp xếp)
+let currentProducts = [...products]; 
+const PRICE_LIMIT = 3000000;
 
-    productList.innerHTML = "";
 
-    list.forEach(p => {
-        productList.innerHTML += `
-            <div class="product-card">
-                <img src="${p.img}" alt="${p.name}">
-                <h3>${p.name}</h3>
-                <p><b>Giá:</b> ${parseInt(p.price).toLocaleString()}đ</p>
-                <p><b>Nơi SX:</b> ${p.origin}</p>
-                <p><b>Đã bán:</b> ${p.sold}</p>
-                <p><b>Đánh giá:</b> ⭐ ${p.rate}</p>
-                <button class="add-btn" onclick="addToCart(${p.id})">🛒 Thêm</button>
-            </div>
+// ========== HÀM TRỢ GIÚP ==========
+function formatCurrency(number) {
+    // Định dạng tiền tệ VNĐ: 21.990.000₫
+    return number.toLocaleString('vi-VN') + '₫';
+}
+
+// ========== HIỂN THỊ SẢN PHẨM ============
+function showProducts(productsToShow) {
+    // Tìm phần tử ngay bên trong hàm để đảm bảo DOM đã được tải
+    const container = document.getElementById('productList'); 
+
+    if (!container) {
+        console.error("Không tìm thấy phần tử #productList để hiển thị sản phẩm.");
+        return;
+    }
+
+    container.innerHTML = '';
+    
+    if (productsToShow.length === 0) {
+        container.innerHTML = '<p class="no-products">Không tìm thấy sản phẩm nào phù hợp.</p>';
+        return;
+    }
+
+    productsToShow.forEach(p => {
+        // Chuyển giá từ string sang number để định dạng
+        const priceNumber = parseInt(p.price, 10); 
+        const priceFormatted = formatCurrency(priceNumber);
+        
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+            <img src="${p.img}" alt="${p.name}">
+            <h3>${p.name}</h3>
+            <p class="product-price">${priceFormatted}</p>
+            <p class="product-sold">Đã bán: ${p.sold} sản phẩm</p>
+            <button class="add-cart" onclick="addToCart(${p.id})">Thêm vào giỏ</button>
         `;
+        container.appendChild(card); 
     });
+}
+
+// ========== SẮP XẾP SẢN PHẨM (tăng/giảm dần giá) ===========
+// Hàm này được gọi khi dropdown Sắp xếp theo Giá thay đổi
+function sortProducts() {
+    // 1. Lấy giá trị sắp xếp
+    const sortValue = document.getElementById('sort-price').value;
+    
+    // 2. Lấy danh sách sản phẩm hiện tại (đã được lọc/lọc nhanh/danh mục)
+    let listToSort = [...currentProducts];
+
+    // 3. Thực hiện sắp xếp
+    if (sortValue === 'asc') {
+        // Tăng dần
+        listToSort.sort((a, b) => parseInt(a.price, 10) - parseInt(b.price, 10));
+    } else if (sortValue === 'desc') {
+        // Giảm dần
+        listToSort.sort((a, b) => parseInt(b.price, 10) - parseInt(a.price, 10));
+    } else {
+        // Mặc định: Sắp xếp theo ID gốc (cần áp dụng lại logic lọc gần nhất)
+        // **Quan trọng: Khi chọn "Giá (Mặc định)", ta cần tái áp dụng lọc khoảng giá nếu có**
+        
+        // Ta cần biết danh sách products gốc của category đang được chọn
+        const categoryElement = document.querySelector('.category-list li.active'); 
+        let categoryName = categoryElement ? categoryElement.textContent.trim().replace(/[\uD800-\uDBFF\uDC00-\uDFFF]/g, '').trim() : null;
+
+        if(categoryName === 'Tất cả') categoryName = null;
+
+        let baseList = categoryName ? products.filter(p => p.category === categoryName) : [...products];
+
+        // Áp dụng lại lọc khoảng giá hiện tại (nếu có)
+        const priceRange = document.getElementById('filter-price-range').value;
+
+        if (priceRange === 'low') {
+            baseList = baseList.filter(p => parseInt(p.price, 10) < PRICE_LIMIT);
+        } else if (priceRange === 'high') {
+            baseList = baseList.filter(p => parseInt(p.price, 10) >= PRICE_LIMIT);
+        }
+        
+        // Sắp xếp mặc định theo ID gốc của danh sách đã được lọc khoảng giá
+        baseList.sort((a, b) => a.id - b.id);
+        listToSort = baseList;
+    }
+    
+    // 4. Cập nhật và hiển thị
+    currentProducts = listToSort;
+    showProducts(currentProducts);
+}
+
+// ========== LỌC THEO KHOẢNG GIÁ/MUA NHIỀU/MỚI NHẤT =========
+// Hàm này được gọi khi dropdown Khoảng giá thay đổi HOẶC khi click nút
+function filterProducts(filterType = null) {
+    
+    // 1. Lấy danh sách sản phẩm cơ sở (đã lọc theo danh mục, nếu có)
+    const categoryElement = document.querySelector('.category-list li.active'); 
+    let categoryName = categoryElement ? categoryElement.textContent.trim().replace(/[\uD800-\uDBFF\uDC00-\uDFFF]/g, '').trim() : null;
+
+    if(categoryName === 'Tất cả') categoryName = null;
+
+    // Bắt đầu lọc từ danh sách gốc hoặc danh sách đã lọc theo category
+    let filtered = categoryName ? products.filter(p => p.category === categoryName) : [...products]; 
+    
+    // 2. --- Lọc theo Khoảng giá (Dropdown: ưu tiên lọc trước) ---
+    const priceRange = document.getElementById('filter-price-range').value;
+
+    if (priceRange === 'low') {
+        filtered = filtered.filter(p => parseInt(p.price, 10) < PRICE_LIMIT);
+    } else if (priceRange === 'high') {
+        filtered = filtered.filter(p => parseInt(p.price, 10) >= PRICE_LIMIT);
+    }
+    
+    // 3. --- Sắp xếp theo Nút bấm (Được mua nhiều, Mới nhất) ---
+    if (filterType === 'popular') {
+        // Sắp xếp giảm dần theo số lượng đã bán (sold)
+        filtered.sort((a, b) => b.sold - a.sold); 
+        // Đặt lại dropdown Sắp xếp theo Giá về mặc định
+        document.getElementById('sort-price').value = '';
+        
+    } else if (filterType === 'newest') {
+        // Sắp xếp giảm dần theo ID (ID cao nhất là mới nhất)
+        filtered.sort((a, b) => b.id - a.id);
+        // Đặt lại dropdown Sắp xếp theo Giá về mặc định
+        document.getElementById('sort-price').value = '';
+    }
+    
+    // Cập nhật currentProducts và render
+    currentProducts = filtered; 
+    showProducts(currentProducts);
 }
 
 // ========== TÌM KIẾM SẢN PHẨM ==========
 function searchProduct() {
-    const keyword = document.getElementById("searchInput").value.toLowerCase();
-    const filtered = products.filter(p => p.name.toLowerCase().includes(keyword));
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const filtered = products.filter(p => p.name.toLowerCase().includes(searchTerm));
     showProducts(filtered);
+    currentProducts = filtered;
 }
 
 // ========== THÊM VÀO GIỎ HÀNG ==========
@@ -1383,24 +865,51 @@ function addToCart(id) {
     alert(`✅ Đã thêm "${product.name}" vào giỏ hàng!`);
 }
 
-// ========== LỌC THEO DANH MỤC ==========
+// ========== LỌC THEO DANH MỤC (ĐÃ SỬA LỖI RESET LỌC) ==========
 function filterCategory(category) {
+    // 1. Reset trạng thái lọc/sắp xếp
+    if(document.getElementById('sort-price')) document.getElementById('sort-price').value = '';
+    if(document.getElementById('filter-price-range')) document.getElementById('filter-price-range').value = '';
+
+    // 2. Xóa/Thêm class active cho danh mục
+    document.querySelectorAll('.category-list li').forEach(li => li.classList.remove('active'));
+    
+    // Thêm class 'active' cho li được hover (Nếu bạn muốn thêm styling active)
+    // Lưu ý: Do dùng onmouseover, bạn có thể cần truyền thêm event/this vào hàm.
+    // Tạm thời, tôi sẽ không thêm class 'active' ở đây vì dùng onmouseover (hover)
+
+    // 3. Lọc sản phẩm
     if (!category) {
-        showProducts(products);
-        return;
+        currentProducts = [...products]; // Reset về tất cả
+    } else {
+        currentProducts = products.filter(p => p.category === category);
     }
-    const filtered = products.filter(p => p.category === category);
-    showProducts(filtered);
+    
+    // 4. Hiển thị sản phẩm mới
+    showProducts(currentProducts);
 }
 
-// ========== HIỂN THỊ TẤT CẢ ==========
+// ========== HIỂN THỊ TẤT CẢ (Đã cập nhật) ==========
 function showAll() {
-    showProducts(products);
+    // Reset các thanh lọc/sắp xếp
+    if(document.getElementById('sort-price')) document.getElementById('sort-price').value = '';
+    if(document.getElementById('filter-price-range')) document.getElementById('filter-price-range').value = '';
+
+    currentProducts = [...products];
+    showProducts(currentProducts);
 }
 
 // ========== CHAT VỚI ADMIN ==========
 function toggleChat() {
-    document.getElementById("chatBody").classList.toggle("show");
+    // Sửa lại class để phù hợp với CSS nếu có
+    const chatBox = document.getElementById("chatBox");
+    if (chatBox.classList.contains('open')) {
+        chatBox.classList.remove('open');
+        document.getElementById("chatBody").style.display = 'none';
+    } else {
+        chatBox.classList.add('open');
+        document.getElementById("chatBody").style.display = 'block';
+    }
 }
 
 function sendMessage() {
@@ -1408,13 +917,28 @@ function sendMessage() {
     const message = input.value.trim();
     if (message) {
         const chatBody = document.getElementById("chatBody");
-        chatBody.innerHTML += `<div class='chat-message user'>${message}</div>`;
+        const newMessage = document.createElement("div");
+        newMessage.className = "chat-message user"; 
+        newMessage.textContent = message;
+        chatBody.appendChild(newMessage);
         input.value = "";
+        
+        // Auto-reply giả lập
+        setTimeout(() => {
+            const adminReply = document.createElement("div");
+            adminReply.className = "chat-message admin"; 
+            adminReply.textContent = "Admin: Chúng tôi đã nhận được tin nhắn của bạn và sẽ phản hồi sớm nhất.";
+            chatBody.appendChild(adminReply);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }, 1000);
+
         chatBody.scrollTop = chatBody.scrollHeight;
     }
 }
 
-// ========== CHẠY SAU KHI HTML TẢI XONG ==========
-window.onload = function() {
+// ========== KHỞI TẠO TRANG ==========
+// Chạy khi toàn bộ DOM đã tải xong
+document.addEventListener('DOMContentLoaded', () => {
+    // Hiển thị tất cả sản phẩm khi tải trang lần đầu
     showProducts(products);
-};
+});
