@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập / Đăng ký</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="auth.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <h1>👤 Đăng nhập / Đăng ký</h1>
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html">🏠 Trang chủ</a>
+    <a href="giohang.html">🛒 Giỏ hàng</a>
+    <a href="GDND.html">👤 Người dùng</a>
+  </nav>
+
+  <!-- Form Đăng nhập -->
+  <main class="login-container">
+    <form id="loginForm" class="login-form">
+      <h2>Đăng nhập</h2>
+      <div class="input-group">
+        <label for="username">Tên đăng nhập hoặc Email:</label>
+        <input type="text" id="username" required placeholder="Tài khoản mẫu: user@example.com">
+      </div>
+      <div class="input-group">
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" required placeholder="Mật khẩu mẫu: password">
+      </div>
+      <button type="submit" class="login-btn">Đăng nhập</button>
+      <p><a href="#" id="showRegister">Đăng ký tài khoản mới</a></p>
+    </form>
+
+    <!-- Form Đăng ký -->
+    <form id="registerForm" class="login-form" style="display:none;">
+      <h2>Đăng ký</h2>
+      <div class="input-group">
+        <label for="regUsername">Tên đăng nhập:</label>
+        <input type="text" id="regUsername" required placeholder="Nhập tên đăng nhập">
+      </div>
+      <div class="input-group">
+        <label for="regPassword">Mật khẩu:</label>
+        <input type="password" id="regPassword" required placeholder="Nhập mật khẩu">
+      </div>
+      <button type="submit" class="login-btn">Đăng ký</button>
+      <p><a href="#" id="backToLogin">Quay lại đăng nhập</a></p>
+    </form>
+  </main>
+
+</body>
+</html>

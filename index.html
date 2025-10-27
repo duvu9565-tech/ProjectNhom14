@@ -1,67 +1,67 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chủ</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Gọi script kiểm tra đăng nhập & xử lý chuyển trang -->
+  <script src="auth.js"></script>
+  <script src="chuyendoi.js"></script>
 </head>
-<body>
-    
 
+<body onload="checkAuth()">
 
-    <!-- THANH TÌM KIẾM -->
-    <header class="header">
-        <h1>🛍️ Cửa hàng trực tuyến</h1>
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
-            <button onclick="searchProduct()">Tìm</button>
-            <a href="giohang.html" class="cart-btn">🛒 Giỏ hàng</a>
-        </div>
-    </header>
-
-    <!-- THANH ĐIỀU HƯỚNG -->
-    <nav class="navbar">
-        <a href="index.html" class="active">🏠 Trang chủ</a>
-        <a href="giohang.html">🛒 Giỏ hàng</a>
-        <a href="GDND.html">👤 Người dùng</a>
-    </nav>
-
-    <!-- KHUNG CHÍNH GỒM DANH MỤC TRÁI + SẢN PHẨM -->
-    <main class="main-container">
-        <!-- DANH MỤC BÊN TRÁI -->
-        <aside class="sidebar">
-            <h3>📂 Danh mục</h3>
-            <ul class="category-list">
-                <li onmouseover="filterCategory('Điện thoại')">📱 Điện thoại</li>
-                <li onmouseover="filterCategory('Laptop')">💻 Laptop</li>
-                <li onmouseover="filterCategory('Âm thanh')">🎧 Âm thanh</li>
-                <li onmouseover="filterCategory('Đồng hồ')">⌚ Đồng hồ</li>
-                <li onmouseover="filterCategory('Phụ kiện')">🔌 Phụ kiện</li>
-                <li onmouseover="filterCategory('Gia dụng')">🏠 Gia dụng</li>
-                <li onmouseover="showAll()">🌐 Tất cả</li>
-            </ul>
-        </aside>
-
-        <!-- DANH SÁCH SẢN PHẨM -->
-        <section class="product-list" id="productList"></section>
-    </main>
-
-    <!-- HỘP CHAT -->
-    <div class="chat-box" id="chatBox">
-        <div class="chat-header" onclick="toggleChat()">💬 Chat với Admin</div>
-        <div class="chat-body" id="chatBody">
-            <div class="chat-message admin">Xin chào! Tôi có thể giúp gì cho bạn?</div>
-        </div>
-        <div class="chat-input">
-            <input type="text" id="chatInput" placeholder="Nhập tin nhắn...">
-            <button onclick="sendMessage()">Gửi</button>
-        </div>
+  <!-- THANH TÌM KIẾM -->
+  <header class="header">
+    <h1>🛍️ Cửa hàng trực tuyến</h1>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+      <button onclick="searchProduct()">Tìm</button>
+      <a href="giohang.html" class="cart-btn">🛒 Giỏ hàng</a>
     </div>
+    <!-- Nút đăng xuất hiển thị khi người dùng đã đăng nhập -->
+    <button onclick="handleLogout()" class="logout-btn">Đăng xuất</button>
+  </header>
 
-    <script src="chuyendoi.js"></script>
+  <!-- THANH ĐIỀU HƯỚNG -->
+  <nav class="navbar">
+    <a href="index.html" class="active">🏠 Trang chủ</a>
+    <a href="giohang.html">🛒 Giỏ hàng</a>
+    <a href="GDND.html">👤 Người dùng</a>
+  </nav>
+
+  <!-- KHUNG CHÍNH GỒM DANH MỤC TRÁI + SẢN PHẨM -->
+  <main class="main-container">
+    <!-- DANH MỤC BÊN TRÁI -->
+    <aside class="sidebar">
+      <h3>📂 Danh mục</h3>
+      <ul class="category-list">
+        <li onmouseover="filterCategory('Điện thoại')">📱 Điện thoại</li>
+        <li onmouseover="filterCategory('Laptop')">💻 Laptop</li>
+        <li onmouseover="filterCategory('Âm thanh')">🎧 Âm thanh</li>
+        <li onmouseover="filterCategory('Đồng hồ')">⌚ Đồng hồ</li>
+        <li onmouseover="filterCategory('Phụ kiện')">🔌 Phụ kiện</li>
+        <li onmouseover="filterCategory('Gia dụng')">🏠 Gia dụng</li>
+        <li onmouseover="showAll()">🌐 Tất cả</li>
+      </ul>
+    </aside>
+
+    <!-- DANH SÁCH SẢN PHẨM -->
+    <section class="product-list" id="productList"></section>
+  </main>
+
+  <!-- HỘP CHAT -->
+  <div class="chat-box" id="chatBox">
+    <div class="chat-header" onclick="toggleChat()">💬 Chat với Admin</div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-message admin">Xin chào! Tôi có thể giúp gì cho bạn?</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Nhập tin nhắn...">
+      <button onclick="sendMessage()">Gửi</button>
+    </div>
+  </div>
 
 </body>
 </html>
-
-
