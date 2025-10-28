@@ -19,7 +19,6 @@
     <a href="GDND.html">👤 Người dùng</a>
   </nav>
 
-  <!-- Form Đăng nhập -->
   <main class="login-container">
     <form id="loginForm" class="login-form">
       <h2>Đăng nhập</h2>
@@ -32,12 +31,23 @@
         <input type="password" id="password" required placeholder="Mật khẩu mẫu: password">
       </div>
       <button type="submit" class="login-btn">Đăng nhập</button>
-      <p><a href="#" id="showRegister">Đăng ký tài khoản mới</a></p>
-    </form>
+      </form>
+    
+    <div class="register-options">
+      <p style="text-align: center; margin-top: 15px; font-weight: bold; color: #555;">--- Đăng ký tài khoản mới ---</p>
+      <button type="button" class="login-btn" id="showRegisterUser" data-role="user" style="background-color: #28a745; margin-bottom: 10px;">
+        Đăng ký với tư cách Người dùng
+      </button>
+      <button type="button" class="login-btn" id="showRegisterShipper" data-role="shipper" style="background-color: #ffc107; color: #333;">
+        Đăng ký với tư cách Người vận chuyển
+      </button>
+    </div>
 
-    <!-- Form Đăng ký -->
     <form id="registerForm" class="login-form" style="display:none;">
-      <h2>Đăng ký</h2>
+      <h2>Đăng ký tài khoản (<span id="registerRoleDisplay" style="color: #007bff;"></span>)</h2>
+      
+      <input type="hidden" id="regRole" value=""> 
+
       <div class="input-group">
         <label for="regUsername">Tên đăng nhập:</label>
         <input type="text" id="regUsername" required placeholder="Nhập tên đăng nhập">
