@@ -5,18 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Giỏ hàng của bạn</title>
   <link rel="stylesheet" href="style.css">
+  <script src="auth.js"></script>
+  <script src="giohang.js"></script>
 </head>
-<body>
 
+<body onload="checkAuth(); loadCart()">
   <!-- PHẦN ĐẦU TRANG -->
   <header class="header">
     <h1>🛒 Giỏ hàng của bạn</h1>
+    <button onclick="handleLogout()" class="logout-btn">Đăng xuất</button>
   </header>
 
   <!-- THANH ĐIỀU HƯỚNG -->
   <nav class="navbar">
     <a href="index.html">🏠 Trang chủ</a>
-    <a href="giohang.html">🛒 Giỏ hàng</a>
+    <a href="giohang.html" class="active">🛒 Giỏ hàng</a>
     <a href="GDND.html">👤 Người dùng</a>
   </nav>
 
@@ -41,9 +44,5 @@
       <button class="checkout-btn" onclick="checkout()">Thanh toán</button>
     </div>
   </section>
-
-  <!-- GỌI FILE JS RIÊNG -->
-  <script src="giohang.js"></script>
-
 </body>
 </html>

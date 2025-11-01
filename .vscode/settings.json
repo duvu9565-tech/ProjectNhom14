@@ -1,0 +1,40 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "MyLocal",
+            "group": "MySQL/MariaDB",
+            "database": "cuahang_online",
+            "username": "root",
+            "password": ""
+        },
+        {
+            "connectionTimeout": 15,
+            "mssqlOptions": {
+                "appName": "SQLTools",
+                "useUTC": true,
+                "encrypt": true,
+                "trustServerCertificate": true,
+                "abortTransactionOnError": false
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "DESKTOP-2DONI79",
+            "port": 1433,
+            "askForPassword": true,
+            "driver": "MSSQL",
+            "name": "cuahang_online_VSCode",
+            "group": "SQL Server Local",
+            "database": "cuahang_online",
+            "username": "sa"
+        }
+    ]
+}

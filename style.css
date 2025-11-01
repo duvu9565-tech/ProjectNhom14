@@ -49,6 +49,43 @@ body {
     background: #ff5722;
     color: white;
 }
+/* NHÓM SẮP XẾP & LỌC SẢN PHẨM TRONG NAVBAR */
+.sort-filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-label {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+}
+
+.sort-filter-group select,
+.sort-filter-group .filter-btn {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sort-filter-group select {
+    background: #f9f9f9;
+}
+
+.filter-btn {
+    background: #ff7043;
+    color: white;
+    border: none;
+    font-weight: 500;
+}
+
+.filter-btn:hover {
+    background: #e04e1c;
+}
 
 /* --------------------------- */
 /* KHUNG NỘI DUNG CHÍNH NGƯỜI DÙNG */
@@ -403,4 +440,460 @@ footer {
     font-weight: bold;
     padding: 4px 8px;
     border-radius: 4px;
+}
+/* ============================== */
+/* SIDEBAR DANH MỤC BÊN TRÁI */
+/* ============================== */
+.main-container {
+    display: flex;
+    padding: 20px 40px;
+    background: #f5f6fa;
+}
+
+/* Sidebar bên trái */
+.sidebar {
+    width: 220px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin-right: 25px;
+    height: fit-content;
+}
+
+.sidebar h3 {
+    color: #ff5722;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #333;
+    font-weight: 500;
+}
+
+.category-list li:hover {
+    background: #ffede3;
+    color: #ff5722;
+}
+
+/* Phần sản phẩm chính */
+.product-list {
+    flex: 1;
+}
+/* ============================== */
+/* CSS cho Trang Đăng nhập (dangnhap.html) */
+/* ============================== */
+
+/* Container chính của form */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Đảm bảo form ở giữa màn hình */
+    padding: 20px;
+    background: #f5f6fa; /* Màu nền nhẹ */
+}
+
+/* Kiểu dáng của form */
+.login-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Giới hạn chiều rộng form */
+    text-align: center;
+}
+
+.login-form h2 {
+    color: #ff5722; /* Màu cam chủ đạo */
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* Nhóm input (label và input) */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #ff5722; /* Màu cam khi focus */
+    outline: none;
+}
+
+/* Nút Đăng nhập */
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background: #ff5722; /* Màu cam chủ đạo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background: #e04e1c;
+}
+
+/* Các liên kết bổ sung */
+.links {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.links a {
+    color: #ff5722;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #e04e1c;
+}
+/* ============================== */
+/* CSS BỔ SUNG CHO TRANG ĐĂNG NHẬP */
+/* ============================== */
+
+/* Nút Đăng xuất trên Header (Chung cho các trang) */
+.header .logout-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 8px 15px;
+    background: #e0353f; /* Màu đỏ đậm */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logout-btn:hover {
+    background: #c02d37;
+}
+
+/* Container chính của form */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; 
+    padding: 20px;
+    background: #f5f6fa; 
+}
+
+/* Kiểu dáng của form */
+.login-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; 
+    text-align: center;
+}
+
+.login-form h2 {
+    color: #ff5722; 
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* Nhóm input (label và input) */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #ff5722; 
+    outline: none;
+}
+
+/* Nút Đăng nhập */
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background: #ff5722; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background: #e04e1c;
+}
+
+/* Các liên kết bổ sung */
+.links {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.links a {
+    color: #ff5722;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #e04e1c;
+}
+/* =========================================== */
+/* === STYLES CHO TRANG SHIPPER (shipper.html) === */
+/* =========================================== */
+
+/* Thêm class shipper-body vào body của shipper.html để áp dụng style này */
+.shipper-body {
+    background: #f0f7ff; /* Màu nền nhẹ nhàng cho Shipper */
+}
+
+.shipper-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.shipper-container h2 {
+    color: #007bff; /* Màu xanh dương nổi bật */
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.order-card {
+    border: 1px solid #cce5ff; /* Border màu xanh nhạt */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: #f8fcff; /* Nền trắng ngà */
+    transition: all 0.3s;
+}
+
+.order-card:hover {
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.1);
+}
+
+.order-card p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.order-card strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Kiểu dáng chung cho các nút hành động */
+.status-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.2s, transform 0.1s;
+    font-weight: 600;
+}
+
+.status-btn:active {
+    transform: scale(0.98);
+}
+
+/* Nút 'Bắt đầu giao hàng' (Trạng thái Chờ lấy hàng) */
+.status-btn.pickup {
+    background-color: #FF9800; /* Màu cam */
+}
+
+/* Nút 'Đã giao hàng thành công' (Trạng thái Đang giao) */
+.status-btn.complete {
+    background-color: #4CAF50; /* Màu xanh lá cây */
+}
+/* style.css - THÊM VÀO CUỐI TỆP */
+
+/* Định nghĩa chung cho nút của Shipper */
+.shipper-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+    width: 100%; 
+    margin-top: 10px;
+}
+
+/* 1. Nút Bắt đầu Giao hàng (Màu xanh sáng theo yêu cầu) */
+.shipper-btn.**start-shipping-btn** {
+    background-color: #007bff; /* Màu xanh dương sáng */
+    color: white; /* Chữ màu sáng */
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.4); /* Đổ bóng để nổi bật */
+}
+
+.shipper-btn.start-shipping-btn:hover {
+    background-color: #0056b3;
+}
+
+/* 2. Nút Hoàn tất (Đang giao) - Giữ nguyên màu xanh lá cây */
+.shipper-btn.complete-btn {
+    background-color: #28a745; 
+    color: white;
+    box-shadow: 0 4px 6px rgba(40, 167, 69, 0.3);
+}
+
+.shipper-btn.complete-btn:hover {
+    background-color: #1e7e34;
+}
+/* style.css - THÊM VÀO CUỐI TỆP */
+
+/* === STYLE CHUNG CHO SHIPPER PANEL === */
+.shipper-body {
+    background: #f0f7ff; 
+}
+
+.shipper-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.order-card {
+    border: 1px solid #cce5ff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: #f8fcff; 
+    transition: all 0.3s;
+}
+
+/* === STYLE CHO TABS === */
+.shipper-tabs {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding: 5px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.shipper-tabs .tab-btn {
+    flex-grow: 1;
+    padding: 12px 10px;
+    border: none;
+    background: #e9ecef;
+    color: #495057;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 6px 6px 0 0;
+    transition: all 0.3s;
+}
+
+.shipper-tabs .tab-btn:hover {
+    background: #dee2e6;
+}
+
+.shipper-tabs .tab-btn.active {
+    background: #007bff; /* Màu xanh nổi bật */
+    color: white;
+    border-bottom: 3px solid #0056b3; /* Vạch chân dày hơn */
+}
+
+/* === STYLE CHO NÚT HÀNH ĐỘNG === */
+.shipper-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: 100%; 
+    margin-top: 10px;
+}
+
+/* Nút Bắt đầu Giao hàng */
+.shipper-btn.start-shipping-btn {
+    background-color: #007bff; 
+    color: white; 
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.4);
+}
+
+.shipper-btn.start-shipping-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Nút Hoàn tất */
+.shipper-btn.complete-btn {
+    background-color: #28a745; 
+    color: white;
+    box-shadow: 0 4px 6px rgba(40, 167, 69, 0.3);
+}
+
+.shipper-btn.complete-btn:hover {
+    background-color: #1e7e34;
 }

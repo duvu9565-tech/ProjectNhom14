@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Giao diện người dùng</title>
   <link rel="stylesheet" href="style.css">
+  <script src="auth.js"></script>
+  <script src="GDND.js" defer></script>
+  <script src="auth.js"></script>
+  <script src="rating.js"></script>  <script src="GDND.js" defer></script>
 </head>
-<body>
 
-  <!-- THANH HEADER -->
+<body onload="checkAuth()">
+  <!-- PHẦN ĐẦU TRANG -->
   <header class="header">
     <h1>👤 Thông tin người dùng</h1>
+    <button onclick="handleLogout()" class="logout-btn">Đăng xuất</button>
   </header>
 
   <!-- THANH ĐIỀU HƯỚNG -->
@@ -20,58 +25,51 @@
     <a href="GDND.html" class="active">👤 Người dùng</a>
   </nav>
 
-  <!-- KHUNG CHÍNH -->
+  <!-- KHU VỰC NỘI DUNG NGƯỜI DÙNG -->
   <section class="user-container">
 
-    <!-- THÔNG TIN NGƯỜI DÙNG -->
+    <!-- THÔNG TIN CÁ NHÂN -->
     <div class="user-profile">
-      <img src="https://cdn-icons-png.flaticon.com/512/219/219970.png" alt="Avatar người dùng" class="avatar-large">
+      <img src="https://via.placeholder.com/100" alt="Avatar người dùng" class="avatar-large">
       <div class="user-details">
-        <h2>Nguyễn Văn A ✅</h2>
+        <h2 id="userNameDisplay">Nguyễn Văn A ✅</h2>
         <p>Người theo dõi: <b>120</b></p>
         <p>Đang theo dõi: <b>80</b></p>
       </div>
     </div>
 
-    <!-- ĐƠN MUA -->
+    <!-- PHẦN ĐƠN MUA -->
     <div class="user-section">
       <h3>📦 Đơn mua</h3>
       <div class="order-status">
-        <button>Chờ xác nhận</button>
-        <button>Chờ lấy hàng</button>
-        <button>Đang giao</button>
-        <button>Đánh giá</button>
+        <button onclick="hienThiDonHang('Chờ xác nhận')">Chờ xác nhận</button>
+        <button onclick="hienThiDonHang('Chờ lấy hàng')">Chờ lấy hàng</button>
+        <button onclick="hienThiDonHang('Đang giao')">Đang giao</button>
+        <button onclick="hienThiDonHang('Đánh giá')">Đánh giá</button>
       </div>
-      <p class="note">Vui lòng chọn trạng thái đơn hàng</p>
+      <div id="order-content" class="specialized-content">
+        <p class="note">Vui lòng chọn trạng thái đơn hàng để xem danh sách</p>
+      </div>
     </div>
 
-    <!-- HỖ TRỢ -->
+    <!-- PHẦN HỖ TRỢ -->
     <div class="user-section">
       <h3>🛠️ Hỗ trợ</h3>
       <div class="support-buttons">
-        <button>Trung tâm trợ giúp</button>
-        <button>Trò chuyện với admin</button>
+        <button onclick="hienThiHoTro('Trung tâm trợ giúp')">Trung tâm trợ giúp</button>
+        <button onclick="hienThiHoTro('Trò chuyện với admin')">Trò chuyện với admin</button>
+      </div>
+      <div id="support-content" class="specialized-content">
+        <p class="note">Chọn một tùy chọn hỗ trợ để bắt đầu</p>
       </div>
     </div>
 
-    <!-- GỢI Ý -->
+    <!-- PHẦN GỢI Ý SẢN PHẨM -->
     <div class="user-section">
       <h3>💡 Có thể bạn cũng thích</h3>
-      <div class="suggest-products">
-        <div class="product">
-          <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ltqy7w5e1g5a4c" alt="Tai nghe Bluetooth">
-          <h4>Tai nghe Bluetooth</h4>
-          <p>350.000đ</p>
-        </div>
-        <div class="product">
-          <img src="https://down-vn.img.susercontent.com/file/sg-11134201-22120-kyixgjs8ghlv82" alt="Chuột không dây">
-          <h4>Chuột không dây</h4>
-          <p>220.000đ</p>
-        </div>
-      </div>
+      <div class="suggest-products" id="suggest-products"></div>
     </div>
 
   </section>
-
 </body>
 </html>
