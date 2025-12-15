@@ -1,10 +1,4 @@
-/* =========================================== */
-/* === STYLES CHO TRANG SHIPPER (shipper.html) === */
-/* === Đồng bộ font, bo góc, và tông màu chủ đạo cam-xanh === */
-/* =========================================== */
 
-/* --------------------------- */
-/* TOÀN TRANG */
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
@@ -15,13 +9,12 @@ body {
     flex-direction: column;
 }
 
-/* Màu nền riêng cho trang shipper - Sử dụng nền ấm áp như GDND */
+
 .shipper-body {
     background: #fef5f1; /* Đồng bộ nền ấm */
 }
 
-/* --------------------------- */
-/* HEADER & LOGOUT (Giữ nguyên style chung) */
+
 .header {
     background: #ff5722; /* Màu cam chủ đạo */
     color: white;
@@ -55,8 +48,7 @@ body {
     transform: translateY(-50%) scale(1.05);
 }
 
-/* --------------------------- */
-/* CONTAINER NỘI DUNG SHIPPER */
+
 
 .shipper-container {
     padding: 30px; /* Tăng padding */
@@ -76,8 +68,7 @@ body {
     font-weight: 700;
 }
 
-/* --------------------------- */
-/* THẺ ĐƠN HÀNG */
+
 
 .order-card {
     /* Thẻ hiển thị thông tin đơn hàng */
@@ -114,8 +105,7 @@ body {
     font-size: 16px;
 }
 
-/* --------------------------- */
-/* TABS */
+
 
 .shipper-tabs {
     display: flex;
@@ -171,7 +161,7 @@ body {
     margin-top: 0;
 }
 
-/* Nút Bắt đầu Giao hàng (Primary Action) */
+/* Nút Bắt đầu Giao hàng  */
 .shipper-btn.start-shipping-btn {
     background-color: #ff5722; /* Dùng màu cam chủ đạo */
     color: white; 
@@ -183,7 +173,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Nút Hoàn tất (Success Action) */
+/* Nút Hoàn tất  */
 .shipper-btn.complete-btn {
     background-color: #28a745; /* Màu xanh lá cây */
     color: white;
@@ -195,7 +185,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Nút Hủy (Nếu có) */
+/* Nút Hủy  */
 .shipper-btn.cancel-btn {
     background-color: #dc3545; /* Màu đỏ */
     color: white;
@@ -206,8 +196,7 @@ body {
 }
 
 
-/* --------------------------- */
-/* FOOTER (Giữ style đồng bộ) */
+
 footer {
     text-align: center;
     padding: 15px;
