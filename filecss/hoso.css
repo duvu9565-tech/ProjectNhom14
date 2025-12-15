@@ -1,0 +1,187 @@
+/* ========================================================== */
+/* === FILE hoso.css: STYLES CHO TRANG CHỈNH SỬA HỒ SƠ (giaodienhoso.html) === */
+/* ========================================================== */
+
+/* --------------------------- */
+/* CƠ BẢN & TOÀN TRANG (Đồng bộ với các trang khác) */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fef5f1; /* Nền ấm áp, nhẹ nhàng */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --------------------------- */
+/* HEADER (Đồng bộ) */
+.header {
+    background: #ff5722;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    font-weight: 600;
+}
+
+/* Nút Đăng xuất trên Header (Đồng bộ) */
+.header .logout-btn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 15px;
+    background: #e0353f; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.header .logout-btn:hover {
+    background: #c02d37;
+    transform: translateY(-50%) scale(1.05);
+}
+
+/* --------------------------- */
+/* THANH ĐIỀU HƯỚNG (NAVBAR) - Đồng bộ */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    background: #fff;
+    padding: 12px;
+    border-bottom: 2px solid #ff5722;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.navbar a {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 20px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    background: #ffede3;
+}
+
+/* ============================================== */
+/* === PHẦN CHỈNH SỬA HỒ SƠ (PROFILE EDIT) === */
+/* ============================================== */
+
+/* Container chính của form chỉnh sửa */
+.profile-edit-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex-grow: 1; /* Quan trọng để đẩy nội dung xuống */
+}
+
+.profile-edit-container h2 {
+    color: #ff5722;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Nhóm input chung */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Input text và tel */
+.input-group input[type="text"],
+.input-group input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #ff5722;
+    outline: none;
+}
+
+/* --- Phần Upload Avatar --- */
+.avatar-upload {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px dashed #ffede3;
+    border-radius: 10px;
+}
+
+/* Ảnh đại diện hiện tại (đã sử dụng trong GDND.css) */
+#currentAvatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ff7043;
+    object-fit: cover;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#newAvatar {
+    margin-top: 10px;
+}
+
+/* --- Nút Hành động --- */
+.save-profile-btn,
+.back-btn {
+    width: 48%; 
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 15px;
+}
+
+.save-profile-btn {
+    background: #28a745; /* Màu xanh lá cho hành động lưu */
+    color: white;
+    margin-right: 4%;
+}
+
+.save-profile-btn:hover {
+    background: #218838;
+}
+
+.back-btn {
+    background: #ff7043; /* Màu cam cho hành động quay lại */
+    color: white;
+}
+
+.back-btn:hover {
+    background: #e04e1c;
+}
