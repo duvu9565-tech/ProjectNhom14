@@ -1,0 +1,181 @@
+/* adminChat.css
+
+/* Cấu trúc chung */
+.chat-main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Cột 1: Danh sách Khách hàng (Sidebar) */
+.chatlist-sidebar {
+    width: 300px;
+    border-right: 1px solid #ddd;
+    background-color: #f8f8f8;
+    height: 600px; /* Chiều cao cố định */
+    overflow-y: auto;
+}
+
+.chatlist-sidebar h3 {
+    padding: 15px;
+    margin: 0;
+    font-size: 1.1em;
+    border-bottom: 1px solid #ddd;
+    background-color: #e9e9e9;
+    color: #333;
+    position: sticky; /* Giữ tiêu đề cố định khi cuộn */
+    top: 0;
+    z-index: 10;
+}
+
+.user-chat-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: relative;
+}
+
+.user-chat-item strong {
+    color: #007bff; /* Màu xanh nổi bật cho tên */
+}
+
+.user-chat-item p {
+    color: #666;
+    font-size: 0.85em;
+    margin: 5px 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-chat-item.active {
+    background-color: #e0e0e0;
+    font-weight: bold;
+    border-left: 3px solid #ff5722; /* Thanh chỉ báo đang chọn */
+}
+
+.user-chat-item:hover {
+    background-color: #ededed;
+}
+
+.new-message-indicator {
+    background-color: #dc3545; /* Đỏ */
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    margin-left: 5px;
+    float: right;
+    font-weight: normal;
+}
+
+/* Cột 2: Khung Chat (Chat Window) */
+.chat-window {
+    flex-grow: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+}
+
+#chatHeader {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    color: #007bff;
+}
+
+/* Hộp hiển thị tin nhắn */
+#chatbox {
+    flex-grow: 1;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fcfcfc;
+    border-radius: 4px;
+}
+
+.welcome-message {
+    text-align: center;
+    margin-top: 150px;
+    color: #999;
+    font-style: italic;
+}
+
+/* Định dạng tin nhắn */
+.message {
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 18px;
+    max-width: 70%;
+    font-size: 0.95em;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+/* Tin nhắn của Khách hàng (User - bên trái) */
+.user-message {
+    background-color: #e2e6ea;
+    color: #333;
+    margin-right: auto;
+    text-align: left;
+    border-bottom-left-radius: 4px;
+}
+
+/* Tin nhắn của Admin (Admin - bên phải) */
+.admin-message {
+    background-color: #ff5722; /* Màu cam nổi bật */
+    color: white;
+    margin-left: auto;
+    text-align: right;
+    border-bottom-right-radius: 4px;
+}
+
+/* Form gửi tin nhắn */
+.message-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.message-form input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.message-form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.message-form button {
+    width: 70px;
+    padding: 12px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.message-form button:hover:not(:disabled) {
+    background-color: #e64a19;
+}
+
+.message-form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉnh sửa Hồ sơ</title>
+    <link rel="stylesheet" href="../filecss/hoso.css"> 
+    <script src="../filejs/auth.js"></script>
+    <script src="../filejs/hoso.js" defer></script> 
+</head>
+
+<body onload="checkAuth()">
+    <header class="header">
+        <h1>🖊️ Chỉnh sửa Hồ sơ</h1>
+        <button onclick="handleLogout()" class="logout-btn">Đăng xuất</button>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">🏠 Trang chủ</a>
+        <a href="giohang.html">🛒 Giỏ hàng</a>
+        <a href="GDND.html">👤 Người dùng</a>
+    </nav>
+
+    <section class="profile-edit-container">
+        <h2>Thông tin cá nhân</h2>
+        
+        <form id="profileEditForm">
+            <div class="input-group avatar-upload">
+                <label for="newAvatar">Ảnh đại diện mới</label>
+                <img id="currentAvatar" src="https://via.placeholder.com/100/40e0d0/ffffff?text=AVT" alt="Avatar hiện tại" class="avatar-large">
+                <input type="file" id="newAvatar" accept="image/*">
+            </div>
+
+            <div class="input-group">
+                <label for="userName">Tên hiển thị</label>
+                <input type="text" id="userName" required placeholder="Nhập tên mới">
+            </div>
+
+            <div class="input-group">
+                <label for="userPhone">Số điện thoại</label>
+                <input type="tel" id="userPhone" placeholder="Nhập số điện thoại mới">
+            </div>
+
+            <button type="submit" class="save-profile-btn">Lưu thay đổi</button>
+            <button type="button" class="back-btn" onclick="window.location.href='GDND.html'">Quay lại</button>
+        </form>
+    </section>
+</body>
+</html>
