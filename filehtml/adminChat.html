@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Hộp thư Hỗ trợ</title>
+    
+    <link rel="stylesheet" href="../style.css"> 
+    
+    <link rel="stylesheet" href="../filecss/adminChat.css"> 
+    
+    <script src="../filejs/auth.js"></script>
+    <script src="../filejs/chat.js" defer></script>
+    
+    <script src="../filejs/adminChat.js"></script> 
+</head>
+<body onload="checkAuth(); initializeAdminChat()">
+    
+    <header class="header">
+        <h1>👨‍💼 ADMIN DASHBOARD</h1>
+        <button onclick="handleLogout()" class="logout-btn">Đăng xuất</button> 
+    </header>
+
+    <nav class="navbar">
+        <a href="admin.html">📦 Quản lý Đơn hàng</a> 
+        <a href="admin.html">⚙️ Quản lý Sản phẩm</a>
+        <a href="admin.html">⭐ Feedback Shop</a>
+        <a href="adminChat.html" class="active">💬 Hộp thư Hỗ trợ</a> 
+    </nav>
+    
+    <div class="chat-main-container">
+        
+        <div class="chatlist-sidebar">
+            <h3>Danh sách Hỗ trợ</h3>
+            <div id="customerChatList">
+                <p style="padding: 10px; text-align: center; color: #999;">Đang tải...</p>
+            </div>
+        </div>
+
+        <div class="chat-window">
+            <h4 id="chatHeader">Vui lòng chọn khách hàng để bắt đầu chat</h4>
+            <div id="chatbox">
+                <p class="welcome-message">Chọn một khách hàng từ danh sách bên trái để xem lịch sử trò chuyện và trả lời.</p>
+            </div>
+            
+            <form id="messageForm" class="message-form" onsubmit="handleAdminSend(event)">
+                <input type="text" id="messageInput" placeholder="Nhập câu trả lời..." required disabled>
+                <button type="submit" disabled>Gửi</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

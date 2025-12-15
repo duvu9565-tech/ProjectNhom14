@@ -16,20 +16,21 @@ const products = [
 // --- HIỂN THỊ TÊN VÀ SỐ ĐIỆN THOẠI NGƯỜI DÙNG ĐĂNG NHẬP (ĐÃ CẬP NHẬT) ---
 function displayUserName() {
     const userNameElement = document.getElementById('userNameDisplay');
-    const userPhoneElement = document.getElementById('userPhoneDisplay'); // Element SĐT mới
+    const userPhoneElement = document.getElementById('userPhoneDisplay'); 
     
     const currentUser = JSON.parse(localStorage.getItem('currentUser')); 
     
     if (currentUser) {
+        // Lấy displayName (tên hiển thị đã chỉnh sửa). Nếu chưa có, sử dụng username
+        const nameToDisplay = currentUser.displayName || currentUser.username; 
+        
         // 1. Cập nhật Tên hiển thị
         if (userNameElement) {
-            // Đọc tên mới nhất từ localStorage
-            userNameElement.innerHTML = `${currentUser.username} <span class="verified-icon">✅</span>`; 
+            userNameElement.innerHTML = `${nameToDisplay} <span class="verified-icon">✅</span>`; 
         }
 
         // 2. Cập nhật Số điện thoại
         if (userPhoneElement) {
-            // Đọc SĐT (sử dụng 'Chưa cập nhật' nếu không có dữ liệu)
             const phone = currentUser.phone || 'Chưa cập nhật'; 
             userPhoneElement.innerHTML = `Số điện thoại: <b>${phone}</b>`; 
         }
@@ -109,38 +110,46 @@ function hienThiDonHang(status) {
 window.hienThiDonHang = hienThiDonHang;
 
 // --- HÀM HỖ TRỢ ---
-function hienThiHoTro(type) {
-    const supportContentArea = document.getElementById("support-content");
-    if (!supportContentArea) return;
+function hienThiHoTro(option) {
+    const supportContent = document.getElementById('support-content');
+    // Xóa note ban đầu và nội dung cũ
+    supportContent.innerHTML = ''; 
 
-    let content = '';
-    if (type === 'Trung tâm trợ giúp') {
-        content = `
-            <h4>📚 Trung tâm trợ giúp</h4>
-            <p>Vui lòng chọn chủ đề cần hỗ trợ:</p>
-            <form class="support-form">
-                <select class="support-input">
-                    <option>Vấn đề về thanh toán</option>
-                    <option>Vấn đề về vận chuyển</option>
-                    <option>Đổi trả hàng hóa</option>
-                    <option>Bảo mật tài khoản</option>
-                </select>
-                <input type="text" class="support-input" placeholder="Nhập từ khóa tìm kiếm...">
-                <button type="submit" class="support-action-btn">Tìm kiếm</button>
-            </form>
-            <p><a href="mailto:help@shop.com">Gửi email hỗ trợ</a></p>
+    if (option === 'Trung tâm trợ giúp') {
+        supportContent.innerHTML = `
+            <h3>🔍 Các Chủ đề Trợ giúp Phổ biến</h3>
+            
+            <div class="support-topic">
+                <h4>1. Vấn đề Đơn hàng & Vận chuyển</h4>
+                <p>Tôi có thể theo dõi đơn hàng ở đâu? Đơn hàng đã giao nhưng tôi chưa nhận được?</p>
+                </div>
+            
+            <div class="support-topic">
+                <h4>2. Đổi trả & Hoàn tiền</h4>
+                <p>Chính sách đổi trả sản phẩm lỗi như thế nào? Khi nào tôi nhận được tiền hoàn lại?</p>
+                </div>
+            
+            <div class="support-topic">
+                <h4>3. Tài khoản & Bảo mật</h4>
+                <p>Cách đổi mật khẩu, cập nhật thông tin cá nhân. Tài khoản bị khóa?</p>
+                </div>
+            
+            <p class="mt-20">Vẫn chưa tìm thấy câu trả lời? Vui lòng sử dụng tùy chọn "Trò chuyện với Admin" để nhận hỗ trợ trực tiếp.</p>
         `;
-    } else if (type === 'Trò chuyện với admin') {
-        content = `
-            <h4>💬 Trò chuyện trực tuyến</h4>
-            <p style="color:#ff5722; font-weight:600;">Tính năng này đang được phát triển!</p>
-            <textarea class="support-input support-textarea" placeholder="Nhập nội dung cần hỗ trợ..."></textarea>
-            <button class="support-action-btn" onclick="alert('Đã gửi yêu cầu trò chuyện. Vui lòng chờ phản hồi.')">Bắt đầu trò chuyện</button>
-            <p class="note">Thời gian phản hồi dự kiến: 10 phút</p>
+        supportContent.style.padding = '15px';
+
+
+    } else if (option === 'Trò chuyện với admin') {
+        // Phần này giữ nguyên
+        supportContent.innerHTML = `
+            <h3>💬 Trò chuyện Trực tuyến với Admin</h3>
+            <p>Bấm vào nút dưới đây để mở giao diện trò chuyện riêng biệt.</p>
+            <button class="chat-open-btn" onclick="window.location.href = 'chat.html';">
+                Mở Cửa sổ Chat (Khách hàng)
+            </button>
         `;
+        supportContent.style.padding = '15px';
     }
-
-    supportContentArea.innerHTML = content;
 }
 window.hienThiHoTro = hienThiHoTro;
 

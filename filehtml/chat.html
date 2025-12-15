@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat với Admin</title>
+    <link rel="stylesheet" href="../style.css"> <script src="../filejs/auth.js"></script>
+    <script src="../filejs/chat.js" defer></script>
+    <style>
+        .chat-container { max-width: 600px; margin: 30px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #fff; }
+        #chatbox { height: 400px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; background-color: #f7f7f7; border-radius: 4px; }
+        .message { margin-bottom: 8px; padding: 8px; border-radius: 6px; max-width: 80%; }
+        .user-message { background-color: #007bff; color: white; margin-left: auto; text-align: right; }
+        .admin-message { background-color: #e2e6ea; color: #333; margin-right: auto; text-align: left; }
+        .message-form input { width: calc(100% - 70px); padding: 10px; border: 1px solid #ddd; border-radius: 4px 0 0 4px; }
+        .message-form button { width: 60px; padding: 10px; background-color: #28a745; color: white; border: none; cursor: pointer; border-radius: 0 4px 4px 0; }
+        .message-form { display: flex; }
+    </style>
+</head>
+<body onload="checkAuth(); loadChat('user')">
+    <header class="header">
+        <h1>💬 Hỗ trợ Trực tuyến</h1>
+        <button onclick="window.location.href = 'GDND.html';" class="logout-btn">Quay lại Hồ sơ</button>
+    </header>
+
+    <div class="chat-container">
+        <h2>Trò chuyện với Admin</h2>
+        <div id="chatbox">
+            </div>
+        <form id="messageForm" class="message-form" onsubmit="sendMessage(event, 'user')">
+            <input type="text" id="messageInput" placeholder="Nhập tin nhắn..." required>
+            <button type="submit">Gửi</button>
+        </form>
+    </div>
+</body>
+</html>
