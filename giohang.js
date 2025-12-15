@@ -127,7 +127,7 @@ function checkout() {
             price: item.price
         })),
         totalPrice: totalPriceNumber,
-        status: "Chờ xác nhận", // Trạng thái ban đầu: "Chờ xác nhận"
+        status: 'Chờ lấy hàng', // Trạng thái ban đầu: "Chờ xác nhận"
         date: currentDate
     };
 

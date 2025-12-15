@@ -1,75 +1,88 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giao diện người dùng</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="auth.js"></script>
-  <script src="GDND.js" defer></script>
-  <script src="auth.js"></script>
-  <script src="rating.js"></script>  <script src="GDND.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👤 Hồ sơ người dùng</title>
+    <link rel="stylesheet" href="filecss/GDND.css">
+    <script src="auth.js"></script>
+    <script src="GDND.js" defer></script>
+    <script src="rating.js" defer></script>
 </head>
 
 <body onload="checkAuth()">
-  <!-- PHẦN ĐẦU TRANG -->
-  <header class="header">
-    <h1>👤 Thông tin người dùng</h1>
-    <button onclick="handleLogout()" class="logout-btn">Đăng xuất</button>
-  </header>
+    <header class="header">
+        <h1>👤 Thông tin người dùng</h1>
+        <button onclick="handleLogout()" class="logout-btn">Đăng xuất</button>
+    </header>
 
-  <!-- THANH ĐIỀU HƯỚNG -->
-  <nav class="navbar">
-    <a href="index.html">🏠 Trang chủ</a>
-    <a href="giohang.html">🛒 Giỏ hàng</a>
-    <a href="GDND.html" class="active">👤 Người dùng</a>
-  </nav>
+    <nav class="navbar">
+        <a href="index.html">🏠 Trang chủ</a>
+        <a href="giohang.html">🛒 Giỏ hàng</a>
+        <a href="GDND.html" class="active">👤 Người dùng</a>
+    </nav>
 
-  <!-- KHU VỰC NỘI DUNG NGƯỜI DÙNG -->
-  <section class="user-container">
+    <section class="user-container">
 
-    <!-- THÔNG TIN CÁ NHÂN -->
-    <div class="user-profile">
-      <img src="https://via.placeholder.com/100" alt="Avatar người dùng" class="avatar-large">
-      <div class="user-details">
-        <h2 id="userNameDisplay">Nguyễn Văn A ✅</h2>
-        <p>Người theo dõi: <b>120</b></p>
-        <p>Đang theo dõi: <b>80</b></p>
-      </div>
+        <div class="user-profile user-section">
+            <img src="https://via.placeholder.com/100/40e0d0/ffffff?text=AVT" alt="Avatar người dùng" class="avatar-large">
+            <div class="user-details">
+                <h2 id="userNameDisplay">Nguyễn Văn A <span class="verified-icon">✅</span></h2>
+                <p>Người theo dõi: <b>120</b></p>
+                <p>Đang theo dõi: <b>80</b></p>
+            </div>
+            <button class="edit-profile-btn">Chỉnh sửa hồ sơ</button>
+        </div>
+
+        <div class="user-section">
+            <h3>📦 Đơn mua</h3>
+            <div class="order-status">
+                <button id="btn-cho-xac-nhan" onclick="hienThiDonHang('Chờ xác nhận')">Chờ xác nhận</button>
+                <button id="btn-cho-lay-hang" onclick="hienThiDonHang('Chờ lấy hàng')">Chờ lấy hàng</button>
+                <button id="btn-dang-giao" onclick="hienThiDonHang('Đang giao')">Đang giao</button>
+                <button id="btn-danh-gia" onclick="hienThiDonHang('Đánh giá')">Đánh giá</button>
+            </div>
+            <div id="order-content" class="specialized-content">
+                <p class="note">Vui lòng chọn trạng thái đơn hàng để xem danh sách</p>
+            </div>
+        </div>
+
+        <div class="user-section">
+            <h3>🛠️ Hỗ trợ</h3>
+            <div class="support-buttons">
+                <button onclick="hienThiHoTro('Trung tâm trợ giúp')">Trung tâm trợ giúp</button>
+                <button onclick="hienThiHoTro('Trò chuyện với admin')">Trò chuyện với admin</button>
+            </div>
+            <div id="support-content" class="specialized-content">
+                <p class="note">Chọn một tùy chọn hỗ trợ để bắt đầu</p>
+            </div>
+        </div>
+
+        <div class="user-section">
+            <h3>💡 Có thể bạn cũng thích</h3>
+            <div class="suggest-products" id="suggest-products">
+                </div>
+        </div>
+
+    </section>
+
+    <div id="ratingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeRatingModal()">&times;</span>
+            <h4>Đánh giá sản phẩm</h4>
+            <div id="rating-form">
+                <p id="productNameRating"></p>
+                <div class="stars" id="star-rating">
+                    <span data-value="1" onclick="submitRating(1)">★</span>
+                    <span data-value="2" onclick="submitRating(2)">★</span>
+                    <span data-value="3" onclick="submitRating(3)">★</span>
+                    <span data-value="4" onclick="submitRating(4)">★</span>
+                    <span data-value="5" onclick="submitRating(5)">★</span>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- PHẦN ĐƠN MUA -->
-    <div class="user-section">
-      <h3>📦 Đơn mua</h3>
-      <div class="order-status">
-        <button onclick="hienThiDonHang('Chờ xác nhận')">Chờ xác nhận</button>
-        <button onclick="hienThiDonHang('Chờ lấy hàng')">Chờ lấy hàng</button>
-        <button onclick="hienThiDonHang('Đang giao')">Đang giao</button>
-        <button onclick="hienThiDonHang('Đánh giá')">Đánh giá</button>
-      </div>
-      <div id="order-content" class="specialized-content">
-        <p class="note">Vui lòng chọn trạng thái đơn hàng để xem danh sách</p>
-      </div>
-    </div>
-
-    <!-- PHẦN HỖ TRỢ -->
-    <div class="user-section">
-      <h3>🛠️ Hỗ trợ</h3>
-      <div class="support-buttons">
-        <button onclick="hienThiHoTro('Trung tâm trợ giúp')">Trung tâm trợ giúp</button>
-        <button onclick="hienThiHoTro('Trò chuyện với admin')">Trò chuyện với admin</button>
-      </div>
-      <div id="support-content" class="specialized-content">
-        <p class="note">Chọn một tùy chọn hỗ trợ để bắt đầu</p>
-      </div>
-    </div>
-
-    <!-- PHẦN GỢI Ý SẢN PHẨM -->
-    <div class="user-section">
-      <h3>💡 Có thể bạn cũng thích</h3>
-      <div class="suggest-products" id="suggest-products"></div>
-    </div>
-
-  </section>
 </body>
+
 </html>
